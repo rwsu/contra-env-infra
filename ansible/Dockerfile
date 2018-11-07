@@ -20,6 +20,7 @@ RUN dnf install -y ansible \
         python2-libcloud \
         python3-libcloud \
 	python2-virtualenv \
+	python-google-auth \
         rsync && \
     dnf clean all && \
     mkdir -p ${APP_ROOT} && \
