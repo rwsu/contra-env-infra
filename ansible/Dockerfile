@@ -1,4 +1,4 @@
-FROM fedora:28
+FROM fedora:29
 
 LABEL name="contrainfra/ansible-executor" \
       maintainer="rnester@redhat.com, cmays@redhat.com, ari@redhat.com" \
@@ -22,7 +22,8 @@ RUN dnf install -y ansible \
         python2-libcloud \
         python3-libcloud \
 	python2-virtualenv \
-	python-google-auth \
+	python2-google-auth \
+	python3-google-auth \
         rsync && \
     dnf clean all && \
     mkdir -p ${APP_ROOT} && \
